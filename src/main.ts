@@ -1,7 +1,6 @@
 let counter = 0;
 
 function setup() {
-  // Create the HTML for the counter
   document.body.innerHTML = `
     <h1>CMPM 121 Project</h1>
     <p>Counter: <span id="counter">0</span></p>
@@ -11,7 +10,7 @@ function setup() {
   `;
 
   const increment = document.getElementById("increment");
-  const decrement = document.getElementById("decrement");
+  const decrement = document.getElementById("dec");
   const reset = document.getElementById("reset");
   const counterSpan = document.getElementById("counter");
 
@@ -24,6 +23,7 @@ function setup() {
 
   decrement.addEventListener("click", () => {
     counter--;
+    console.log("counter");
     display();
   });
 
